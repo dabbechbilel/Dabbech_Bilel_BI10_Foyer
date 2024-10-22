@@ -16,13 +16,15 @@ import java.util.List;
 public class Chambre {
     @ManyToOne
     private Bloc bloc;
-    @OneToMany
-    List<Reservation> reservations;
+
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idChambre;
+
     private Long numeroChambre;
+
     @Enumerated(EnumType.STRING)
-    private TypeChambre typeC;
+    private TypeChambre typeC; // Ensure 'TypeChambre' is correctly defined elsewhere
 }
